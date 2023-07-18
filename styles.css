@@ -72,6 +72,11 @@
   background-color: #FFA54F;
 }
 
+.ac {
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 600px) {
   .calculator {
     left: 0;
