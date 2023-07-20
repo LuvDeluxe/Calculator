@@ -68,13 +68,31 @@
 }
 
 .operator:hover,
-.equal:hover {
+.equal:hover,
+.ac,
+.ac:hover {
   background-color: #FFA54F;
+}
+
+.ac:hover {
+  color: black;
 }
 
 .ac {
   flex-basis: 100%;
   margin-top: 10px;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media screen and (max-width: 600px) {
