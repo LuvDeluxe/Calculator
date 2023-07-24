@@ -69,15 +69,30 @@ function calculateResult(num1, num2) {
 }
 
 equalButton.addEventListener('click', () => {
-  if (isSecondOperand && secondOperand !== '') {
+  if (operator !== '' && secondOperand !== '') {
     const result = calculateResult(parseFloat(firstOperand), parseFloat(secondOperand))
-    display.value = result
-    firstOperand = result.toString()
+    if (!isNaN(result)) {
+      display.value = result
+      firstOperand = result.toString()
+      secondOperand = ''
+      operator = ''
+      isSecondOperand = false
+    } else {
+      display.value = 'Error'
+      firstOperand = ''
+      secondOperand = ''
+      operator = ''
+      isSecondOperand = false
+    }
+  } else {
+    display.value = 'Error'
+    firstOperand = ''
     secondOperand = ''
     operator = ''
     isSecondOperand = false
   }
 })
+
 
 clearButton.addEventListener('click', () => {
   display.value = ''
